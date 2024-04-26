@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   return (
-    <div className='w-full'>
+    <div className="w-full">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -32,13 +32,13 @@ const Navbar: React.FC = () => {
                 <Link to={'/home'}>Home</Link>
               </li>
               <li>
-                <Link to={'/about'}>About</Link>
+                <a href="#about">About</a>
               </li>
               <li>
-                <Link to={'/services'}>services</Link>
+                <a href="#service">Services</a>
               </li>
               <li>
-                <Link to={'/contact'}>Contact</Link>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -50,22 +50,26 @@ const Navbar: React.FC = () => {
               <Link to={'/home'}>Home</Link>
             </li>
             <li>
-              <Link to={'/about'}>About</Link>
+              <a href="#about">About</a>
             </li>
             <li>
-              <Link to={'/services'}>services</Link>
+              <a href="#services">Services</a>
             </li>
             <li>
-              <Link to={'/contact'}>Contact</Link>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
         <div className="navbar-end mr-4 flex gap-4">
           <div>
-            <button className="border-2 border-blue-400 py-1 px-4 rounded-lg">Sign In</button>
+            <button className="border-2 border-blue-400 py-1 px-4 rounded-lg">
+              Sign In
+            </button>
           </div>
           <div>
-            <button className="border-2 border-blue-400 bg-blue-400 text-white py-1 px-4 rounded-lg">Sign Up</button>
+            <button className="border-2 border-blue-400 bg-blue-400 text-white py-1 px-4 rounded-lg">
+              Sign Up
+            </button>
           </div>
         </div>
       </div>

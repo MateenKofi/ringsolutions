@@ -1,5 +1,5 @@
 // App.js
-import React, { Suspense } from 'react';
+import React,{Suspense} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import Loading from './components/Loading';
@@ -10,6 +10,7 @@ const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 const Navbar = React.lazy(() => import('./components/Navbar'));
 const Footer = React.lazy(() => import('./components/Footer'));
 
+
 function App() {
   return (
     <div className='w-full grid place-items-center'>
@@ -17,11 +18,12 @@ function App() {
       <Suspense fallback={<Loading/>}>
         <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route index={false} path="/" element={<LandingPage />} >
+            <Route index path="/" element={<Home />} />
+            <Route path="#about" element={<AboutPage />} />
+            <Route path="#contact" element={<ContactPage />} />
+            <Route path="#services" element={<ServicesPage />} />
+        </Route>
         </Routes>
         <Footer />
       </Suspense>

@@ -5,7 +5,7 @@ import { Contact,Store } from 'lucide-react'
 
 const AboutPage:React.FC = () => {
   return (
-    <div className="w-full grid bg-[#fff]  place-items-center">
+    <div className="w-full grid bg-[#fff]  place-items-center" id='about'>
     <div className="w-5/6 grid lg:grid-cols-[2fr,3fr] place-items-center">
       <div className=' w-full h-fit grid justify-between'>
         
@@ -37,15 +37,15 @@ const AboutPage:React.FC = () => {
 
         
       </div>
-      <div className="grid grid-cols-2 grid-rows-2 gap-2">
+      <div className="w-full grid lg:grid-cols-2 grid-rows-2 gap-2 max-sm:py-10">
   <div className="col-span-1 row-span-2  grid place-items-center">
-    <img src={image1} alt="image1" className='w-full h-1/2 rounded-md'/>
+    <img src={image1} alt="image1" className='w-full lg:h-1/2 rounded-md'/>
   </div>
-  <div className="grid place-items-center -mb-12">
-    <img src={image2} alt="image2"  className='w-full h-3/5  rounded-md'/>
+  <div className="grid place-items-center lg:-mb-12">
+    <img src={image2} alt="image2"  className='w-full lg:h-3/5  rounded-md'/>
   </div>
-  <div className=" grid place-items-center -mt-12">
-    <img src={image1} alt="image1" className='w-full h-3/5  rounded-md'/>
+  <div className=" grid place-items-center lg:-mt-12">
+    <img src={image1} alt="image1" className='w-full lg:h-3/5  rounded-md'/>
   </div>
 
 </div>
