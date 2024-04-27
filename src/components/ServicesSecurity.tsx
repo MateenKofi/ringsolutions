@@ -7,14 +7,14 @@ import { MdMiscellaneousServices } from "react-icons/md";
 
 const ServicesSecurity: React.FC = () => {
   return (
-    <div className="w-full h-auto  mt-10  ">
+    <div className="w-full h-auto  mt-10 " id='cctv'>
       <div className="w-full  bg-[#fff] grid place-items-center">
         <h1 className="flex gap-2 border-b-2 text-blue-600 font-bold text-2xl mb-5 pb-4">
             <MdMiscellaneousServices size={24} className='text-blue-600'/>  
           <span>Security services</span>
         </h1>
 
-        <div className="w-full  grid lg:grid-cols-2  pb-32">
+        <div className="w-full  grid lg:grid-cols-2 gap-4 pb-32">
           <div className="lg:relative grid place-items-center gap-4  w-full">
             <img
               src={image1}
@@ -24,7 +24,7 @@ const ServicesSecurity: React.FC = () => {
             <img
               src={image2}
               alt="Second Image"
-              className="w-full rounded-md lg:w-[50%] lg:absolute lg:top-3/4 lg:left-96 transform lg:-translate-x-1/2 lg:-translate-y-1/2 h-[40dvh] lg:border-8 lg:border-white"
+              className="w-full rounded-md lg:w-[50%] xl:w-[60%] lg:absolute xl:top-[80%] lg:top-3/4 xl:left-[35rem] lg:left-96 transform lg:-translate-x-1/2 lg:-translate-y-1/2 h-[40dvh] lg:border-8 lg:border-white"
             />
           </div>
           <div>

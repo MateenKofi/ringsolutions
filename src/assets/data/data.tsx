@@ -35,21 +35,20 @@ export const security = [
 export const CCTV_DATA = [
     {
       id: 1,
-      title: "broadband",
-      description: "Truly Unlimited Internet With Speed Up-To 1000 Mbps !",
+      title: "Access",
+      description: "Having access where ever you are. just tap on it!",
       image: broadbandImg,
     },
     {
       id: 2,
-      title: "VOICE",
-      description:
-        "Crystal Clear Truly Unlimited STD And Local Calls With Eagle Eye Smart Telephony",
+      title: "Alert",
+      description: "Get alert when something is going wrong",
       image: voiceImg,
     },
     {
       id: 3,
-      title: "CCTV",
-      description: "Enterprise Business Solutions Internet Leased Line",
+      title: " surveillance",
+      description: "Keep an eye on your property",
       image: cctvImg,
     },
   ];

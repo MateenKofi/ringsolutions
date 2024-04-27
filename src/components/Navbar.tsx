@@ -29,16 +29,16 @@ const Navbar: React.FC = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               <li>
-                <Link to={'/home'}>Home</Link>
+                <Link to={'/'}>Home</Link>
               </li>
               <li>
                 <a href="#about">About</a>
               </li>
               <li>
-                <a href="#service">Services</a>
+                <a href="#service"> Services </a>
               </li>
               <li>
-                <Link to={'cctv'}>cctv</Link>
+              <a href='#cctv'>cctv</a>
               </li>
               <li>
                 <a href="#contact">Contact</a>
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to={'/home'}>Home</Link>
+              <Link to={'/'}>Home</Link>
             </li>
             <li>
               <a href="#about">About</a>
@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
               <a href="#services">Services</a>
             </li>
             <li>
-                <Link to={'cctv'}>cctv</Link>
+                <a href='#cctv'>cctv</a>
               </li>
             <li>
               <a href="#contact">Contact</a>
