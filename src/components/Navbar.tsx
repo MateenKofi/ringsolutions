@@ -38,6 +38,9 @@ const Navbar: React.FC = () => {
                 <a href="#service">Services</a>
               </li>
               <li>
+                <Link to={'cctv'}>cctv</Link>
+              </li>
+              <li>
                 <a href="#contact">Contact</a>
               </li>
             </ul>
@@ -55,6 +58,9 @@ const Navbar: React.FC = () => {
             <li>
               <a href="#services">Services</a>
             </li>
+            <li>
+                <Link to={'cctv'}>cctv</Link>
+              </li>
             <li>
               <a href="#contact">Contact</a>
             </li>

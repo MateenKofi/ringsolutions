@@ -1,6 +1,7 @@
 import React from "react";
-import { CCTV_DATA } from "../assets/data/index";
-import { bannerImg, mobileImg, cameraImg } from "../assets/images/index";
+import { CCTV_DATA } from "../assets/data/data";
+import {broadbandImg,voiceImg,cctvImg} from '../assets/data/index'
+
 
 type CardType = {
   id: number;
@@ -44,7 +45,7 @@ const CCTVPage: React.FC = () => {
       </section>
       {/* Banner */}
       <section className="">
-        <img src={bannerImg} alt="banner" className="w-full h-auto" />
+        <img src={broadbandImg} alt="banner" className="w-full h-auto" />
         {/* Calls section */}
         <p className="bg-[#F68A1F] p-5 text-center text-white font-medium text-[27px]">
           Free Unlimitd Smart Voice Calls !
@@ -54,7 +55,7 @@ const CCTVPage: React.FC = () => {
           {/* Eagle Eye App */}
           <div className="gap-14 w-auto mx-auto max-sm:flex-col lg:flex my-10 ">
             <div className="w-60 h-96">
-              <img src={mobileImg} alt="Mobile-app" className="w-full h-full" />
+              <img src={voiceImg} alt="Mobile-app" className="w-full h-full" />
             </div>
             <div className="flex flex-col justify-start w-[65%] ">
               <h1 className="font-normal text-[45px] md:text-3xl py-1">
@@ -148,7 +149,7 @@ const CCTVPage: React.FC = () => {
             </div>
             {/* Image */}
             <div className="w-auto">
-              <img src={cameraImg} className="" alt="cctv-pciture" />
+              <img src={cctvImg} className="" alt="cctv-pciture" />
             </div>
           </div>
         </section>
