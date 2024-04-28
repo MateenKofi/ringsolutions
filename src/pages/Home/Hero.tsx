@@ -4,7 +4,7 @@ import { CalendarClock } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <div className="w-full bg-pink-50 grid  place-items-center">
+    <div className="w-full  grid  place-items-center">
       <div className="w-5/6 grid lg:grid-cols-2 place-items-center">
         <div className='h-full grid justify-between items-center'>
           <div className='flex flex-col gap-4'>
@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
             <h4 className="uppercase">
               Highly Professonal cleaning and Housing Security
             </h4>
-            <h1 className="text-blue-600 text-3xl lg:text-5xl font-bold uppercase">
+            <h1 className="text-orange-600 text-3xl lg:text-5xl font-bold uppercase">
               Ring Solutions
             </h1>
             </div>
@@ -25,14 +25,14 @@ const Hero: React.FC = () => {
               accumsan et viverra justo commodo.
             </p>
             <div>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-2xl flex gap-2">
+              <button className="bg-orange-600 text-white px-6 py-2 rounded-2xl flex gap-2">
                 <CalendarClock size={24} />
                 <span> Book Schedul</span>
               </button>
             </div>
           </div>
           <div>
-            <h1 className='uppercase text-lg text-blue-600  lg:text-xl font-bold'>spring ring Solutions</h1>
+            <h1 className='uppercase text-lg text-orange-600  lg:text-xl font-bold'>spring ring Solutions</h1>
             <h1 className='text-slate-600 text-xl lg:text-3xl font-bold uppercase'>Brand You can always trust</h1>
           </div>
         </div>
@@ -44,6 +44,10 @@ const Hero: React.FC = () => {
           />
         </div>
       </div>
+      {/* badge */}
+      <div className="w-full grid place-items-center bg-orange-600 text-white py-2">
+        <h1 className="text-3xl font-mono font-bold uppercase ">Spring Ring Solutions, we spring beyound our reach</h1>
+        </div>
     </div>
   );
 };

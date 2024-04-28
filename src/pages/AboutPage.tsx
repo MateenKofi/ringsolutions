@@ -10,7 +10,7 @@ const AboutPage:React.FC = () => {
       <div className=' w-full h-fit grid justify-between'>
         
         <div className='flex flex-col gap-4'>
-        <header className='text-blue-600 font-bold text-xl flex gap-2'>
+        <header className='text-orange-600 font-bold text-xl flex gap-2'>
           <span><Store/></span>
           <p>About us</p> </header>
         <h2 className='text-2xl lg:text-3xl font-bold uppercase'>quickly and easy ways to clean your house</h2>
@@ -21,14 +21,14 @@ const AboutPage:React.FC = () => {
         </p>
         </div>
         <div className='flex flex-col gap-2'>
-          <h2 className='uppercase text-2xl font-bold text-blue-600 pt-4'>award winning company</h2>
+          <h2 className='uppercase text-2xl font-bold text-orange-600 pt-4'>award winning company</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             euismod bibendum laoreet. Proin gravida dolor sit amet lacus
             accumsan et viverra justo commodo.
           </p>
           <div>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-2xl flex gap-2">
+          <button className="bg-orange-600 text-white px-6 py-2 rounded-2xl flex gap-2">
                 <Contact size={24} />
                 <span> Contact Us</span>
               </button>

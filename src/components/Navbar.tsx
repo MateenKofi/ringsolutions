@@ -68,12 +68,12 @@ const Navbar: React.FC = () => {
         </div>
         <div className="navbar-end mr-4 flex gap-4">
           <div>
-            <button className="border-2 border-blue-400 py-1 px-4 rounded-lg">
+            <button className="border-2 border-orange-600 py-1 px-4 rounded-lg">
               Sign In
             </button>
           </div>
           <div>
-            <button className="border-2 border-blue-400 bg-blue-400 text-white py-1 px-4 rounded-lg">
+            <button className="border-2 border-orange-600 bg-orange-600 text-white py-1 px-4 rounded-lg">
               Sign Up
             </button>
           </div>

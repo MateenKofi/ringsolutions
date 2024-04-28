@@ -7,14 +7,14 @@ import { MdMiscellaneousServices } from "react-icons/md";
 
 const ServicesSecurity: React.FC = () => {
   return (
-    <div className="w-full h-auto  mt-10 " id='cctv'>
+    <div className="w-full h-auto  mt-10 " >
       <div className="w-full  bg-[#fff] grid place-items-center">
-        <h1 className="flex gap-2 border-b-2 text-blue-600 font-bold text-2xl mb-5 pb-4">
-            <MdMiscellaneousServices size={24} className='text-blue-600'/>  
+        <h1 className="flex gap-2 border-b-2 text-orange-600 font-bold text-2xl mb-5 pb-4">
+            <MdMiscellaneousServices size={24} className='text-orange-600'/>  
           <span>Security services</span>
         </h1>
 
-        <div className="w-full  grid lg:grid-cols-2 gap-4 pb-32">
+        <div className="w-full  grid lg:grid-cols-2 gap-4 pb-32" id='cctv'>
           <div className="lg:relative grid place-items-center gap-4  w-full">
             <img
               src={image1}
@@ -28,7 +28,7 @@ const ServicesSecurity: React.FC = () => {
             />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-blue-600 py-2 uppercase">
+            <h1 className="text-xl font-bold text-orange-600 py-2 uppercase">
               Security & Safety is out priority
             </h1>
             <h1 className="text-4xl font-bold text-slate-700 py-2 uppercase">
@@ -51,12 +51,12 @@ const ServicesSecurity: React.FC = () => {
                 return (
                   <div
                     key={items.id}
-                    className="border-2 rounded-lg flex flex-col items-center relative">
-                    <div className=" border-2 rounded-full p-4 absolute -top-6 text-white bg-blue-600">
+                    className="border-2 bg-orange-600 rounded-lg flex flex-col items-center relative">
+                    <div className=" border-2 rounded-full p-4 absolute -top-6 text-white bg-orange-600">
                       {items.image}
                     </div>
                     <div className="w-full grid place-items-center text-center pt-8 pb-2">
-                      <h1 className="max-sm:text-2xl max-sm:w-5/12  lg:text-base  font-semibold text-blue-600">
+                      <h1 className="max-sm:text-2xl max-sm:w-5/12  lg:text-base  font-semibold text-white">
                         {items.title}
                       </h1>
                     </div>
@@ -65,7 +65,7 @@ const ServicesSecurity: React.FC = () => {
               })}
             </div>
             <div className="w-full py-4">
-              <button className="max-sm:w-full bg-blue-600 text-white px-6 py-2 rounded-2xl flex items-center justify-center gap-2">
+              <button className="max-sm:w-full bg-orange-600 text-white px-6 py-2 rounded-2xl flex items-center justify-center gap-2">
                 <CalendarClock size={24} />
                 <span> Book Schedul</span>
               </button>
