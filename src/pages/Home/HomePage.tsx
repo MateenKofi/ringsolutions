@@ -3,6 +3,7 @@ import Hero from './Hero'
 import AboutPage from '../AboutPage'
 import ServicesPage from '../ServicesPage'
 import CCTVPage from '../CCTVPage'
+import Workers from '../../components/Workers'
 
 const HomePage:React.FC = () => {
   return (
@@ -16,6 +17,9 @@ const HomePage:React.FC = () => {
       </div>
       <div>
         <CCTVPage />
+      </div>
+      <div>
+        <Workers />
       </div>
     </div>
   )

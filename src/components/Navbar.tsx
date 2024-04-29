@@ -1,9 +1,32 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
+import UserSection from './UserSection';
+import SingIn from './Authentications/SingIn';
+import SignUp from './Authentications/SingUp';
+import logo from '../assets/images/logo.svg'
 
 const Navbar: React.FC = () => {
+  const [bookings, setBookings] = useState<boolean>(false)
+  const [singIn, setSignIn] = useState<boolean>(false)
+  const [singUp, setSignUp] = useState<boolean>(false)
+  const showSignIn = () => {
+    setSignIn(true)
+    setSignUp(false)
+  }
+  const showSignUp = () => {
+    setSignUp(true)
+    setSignIn(false)
+  }
+  const handleBookingsClick = () => {
+    setBookings(true)
+  }
+  const handleHomeClick = () => {
+    setBookings(false)
+  }
   return (
-    <div className="w-full">
+    <div className="w-full static z-50">
+      {singIn && <SingIn setSingIn={setSignIn} />}
+      {singUp && <SignUp setSignUp={setSignUp}/>}
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -29,54 +52,107 @@ const Navbar: React.FC = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               <li>
-                <Link to={'/'}>Home</Link>
+                <Link to={'/'} onClick={handleHomeClick}>Home</Link>
               </li>
               <li>
-                <a href="#about">About</a>
+                <a
+                  href="#about"
+                  onClick={(e) => {
+                    if (bookings) e.preventDefault();
+                  }}
+                  className={bookings ? 'disabled text-slate-300' : ''}
+                >
+                  About
+                </a>
               </li>
               <li>
-                <a href="#service"> Services </a>
+                <a
+                  href="#services"
+                  onClick={(e) => {
+                    if (bookings) e.preventDefault();
+                  }}
+                  className={bookings ? 'disabled text-slate-300' : ''}
+                >
+                  Services
+                </a>
               </li>
               <li>
-              <a href='#cctv'>cctv</a>
+                <a
+                  href="#cctv"
+                  onClick={(e) => {
+                    if (bookings) e.preventDefault();
+                  }}
+                  className={bookings ? 'disabled text-slate-300' : ''}
+                >
+                  CCTV
+                </a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <Link
+                  to={'/bookings'}
+                  onClick={handleBookingsClick}
+                >
+                  Bookings
+                </Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">ringsolutions</a>
+          <a className="flex flex-col items-center ">
+            <img src={logo} alt="logo" className="w-10 h-10"/>
+            
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <Link to={'/'}>Home</Link>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-                <a href='#cctv'>cctv</a>
+          <li>
+                <Link to={'/'} onClick={handleHomeClick}>Home</Link>
               </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+              <li>
+                <a
+                  href="#about"
+                  onClick={(e) => {
+                    if (bookings) e.preventDefault();
+                  }}
+                  className={bookings ? 'disabled text-slate-300' : ''}
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  onClick={(e) => {
+                    if (bookings) e.preventDefault();
+                  }}
+                  className={bookings ? 'disabled text-slate-300' : ''}
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#cctv"
+                  onClick={(e) => {
+                    if (bookings) e.preventDefault();
+                  }}
+                  className={bookings ? 'disabled text-slate-300' : ''}
+                >
+                  CCTV
+                </a>
+              </li>
+              <li>
+                <Link
+                  to={'/bookings'}
+                  onClick={handleBookingsClick}
+                >
+                  Bookings
+                </Link>
+              </li>
           </ul>
         </div>
         <div className="navbar-end mr-4 flex gap-4">
-          <div>
-            <button className="border-2 border-orange-600 py-1 px-4 rounded-lg">
-              Sign In
-            </button>
-          </div>
-          <div>
-            <button className="border-2 border-orange-600 bg-orange-600 text-white py-1 px-4 rounded-lg">
-              Sign Up
-            </button>
-          </div>
+         <UserSection showSignIn={showSignIn} showSignUp={showSignUp}/>
+         
         </div>
       </div>
     </div>

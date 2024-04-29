@@ -6,7 +6,7 @@ import house from '../assets/svgs/house.svg'
 
 const ServicesCleaning:React.FC = () => {
   return (
-    <div className="w-full  max-sm:mt-10 z-0">
+    <div className="w-full px-20 max-sm:mt-10 z-0">
           <div className="w-full  bg-[#fff] grid place-items-center">
             <h1 className="border-b-2 text-orange-600 font-bold text-2xl mb-10 pb-4">
               cleaning service

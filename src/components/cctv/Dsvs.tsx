@@ -3,7 +3,7 @@ import cameraImg from '../../assets/images/camera.png';
 
 const Dsvs:React.FC = () => {
   return (
-    <div className="gap-14 w-auto mx-auto my-10  py-5 px-2 max-sm:p-0 max-sm:flex-col lg:flex">
+    <div className="gap-14 w-3/4 mx-auto my-10  py-5 px-2 max-sm:p-0 max-sm:flex-col lg:flex">
     {/* DSVS Software Text Content*/}
     <div className="flex flex-col w-auto">
       <h1 className="text-[45px] font-normal">DSVS SOFTWARE</h1>

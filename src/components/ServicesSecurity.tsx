@@ -4,6 +4,7 @@ import image2 from '../assets/images/fajcd_WhatsApp Image 2024-04-26 at 10.39.21
 import { security } from '../assets/data/data';
 import { CalendarClock } from 'lucide-react';
 import { MdMiscellaneousServices } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const ServicesSecurity: React.FC = () => {
   return (
@@ -14,19 +15,19 @@ const ServicesSecurity: React.FC = () => {
           <span>Security services</span>
         </h1>
 
-        <div className="w-full  grid lg:grid-cols-2 gap-4 pb-32" id='cctv'>
-          <div className="lg:relative grid place-items-center gap-4  w-full">
-            <img
-              src={image1}
-              alt="First Image"
-              className="w-full lg:w-[80%] h-[60dvh] rounded-md"
-            />
-            <img
-              src={image2}
-              alt="Second Image"
-              className="w-full rounded-md lg:w-[50%] xl:w-[60%] lg:absolute xl:top-[80%] lg:top-3/4 xl:left-[35rem] lg:left-96 transform lg:-translate-x-1/2 lg:-translate-y-1/2 h-[40dvh] lg:border-8 lg:border-white"
-            />
-          </div>
+        <div className="w-full px-10  grid lg:grid-cols-[3fr,2fr]  gap-4 pb-32" id='cctv'>
+          <div className="lg:relative  grid place-items-center gap-4 w-full  justify-items-start">
+  <img
+    src={image1}
+    alt="First Image"
+    className="lg:w-[70%] h-[60dvh] rounded-md"
+  />
+  <img
+    src={image2}
+    alt="Second Image"
+    className="w-full rounded-md lg:w-[50%]  lg:absolute  lg:top-3/4  lg:left-96 transform lg:-translate-x-1/2 lg:-translate-y-1/2  h-[40dvh] lg:border-8 lg:border-white"
+  />
+</div>
           <div>
             <h1 className="text-xl font-bold text-orange-600 py-2 uppercase">
               Security & Safety is out priority
@@ -65,10 +66,12 @@ const ServicesSecurity: React.FC = () => {
               })}
             </div>
             <div className="w-full py-4">
+              <Link to={'/bookings'}>
               <button className="max-sm:w-full bg-orange-600 text-white px-6 py-2 rounded-2xl flex items-center justify-center gap-2">
                 <CalendarClock size={24} />
                 <span> Book Schedul</span>
               </button>
+              </Link>
             </div>
           </div>
         </div>

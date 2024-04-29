@@ -4,6 +4,9 @@ import { GiCctvCamera } from "react-icons/gi";
 import broadbandImg from "../svgs/broadband.svg";
 import voiceImg from "../svgs/voice.svg";
 import cctvImg from "../svgs/cctv.svg";
+import worker1 from '../images/Rectangle 10.png';
+import worker2 from '../images/Rectangle 29.png';
+import worker3 from '../images/Rectangle 32.png';
 
 
 
@@ -53,3 +56,29 @@ export const CCTV_DATA = [
     },
   ];
   
+
+  export const Worker= [
+    {
+      id:1,
+      image: worker1,
+      name: "John Doe",
+      job: "Electrician",
+    },
+    {
+      id:2,
+      image: worker2,
+      name: "Jane Doe",
+      job: "Plumber",
+    },
+    {
+      id:3,
+      image: worker3,
+      name: "John Doe",
+      job: "Electrician",
+    },
+    {
+      id:4,
+      image: worker1,
+      name: "Jane Doe",
+      job: "Plumber",
+    },];
