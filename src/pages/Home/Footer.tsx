@@ -53,21 +53,21 @@ const Footer: React.FC = () => {
           </a>
         </div>
       </nav>
-      <nav className="grid justify-center">
+      <nav className="grid lg:justify-center">
         <div className="flex flex-col">
           <h6 className="footer-title">Useful Links</h6>
           <div className="">
             <ul className="menu menu-vertical text-base">
-              <li>
+              <li className='hover:border-b transition-all ease-in-out duration-300'>
                 <Link to={'/'}>Home</Link>
               </li>
-              <li>
+              <li className='hover:border-b transition-all ease-in-out duration-300'>
                 <a href="#about">About</a>
               </li>
-              <li>
+              <li className='hover:border-b transition-all ease-in-out duration-300'>
                 <a href="#services">Services</a>
               </li>
-              <li>
+              <li className='hover:border-b transition-all ease-in-out duration-300'>
                 <a href="#cctv">CCTV</a>
               </li>
             </ul>
