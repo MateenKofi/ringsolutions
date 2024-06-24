@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/components/dashboard/Sales.tsx"],
+  "include": ["src", "src/components/dashboard/Sales.tsx", "src/components/Footer.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

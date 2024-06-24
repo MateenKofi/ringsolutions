@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image } from 'primereact/image';
-import { Worker } from '../assets/data/data'
+import { Worker } from '../../assets/data/data'
 
 const Workers:React.FC = () => {
   return (

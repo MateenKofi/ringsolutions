@@ -1,9 +1,9 @@
 import React from 'react'
 import Hero from './Hero'
-import AboutPage from '../AboutPage'
-import ServicesPage from '../ServicesPage'
-import CCTVPage from '../CCTVPage'
-import Workers from '../../components/Workers'
+import AboutPage from './AboutPage'
+import ServicesPage from './ServicesPage'
+import CCTVPage from './CCTVPage'
+import Workers from './Workers'
 
 const HomePage:React.FC = () => {
   return (

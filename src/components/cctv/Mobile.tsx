@@ -4,7 +4,7 @@ import mobileImg from '../../assets/images/mobile.png';
 const Mobile:React.FC = () => {
     
   return (
-    <div className="gap-14 w-2/3 mx-auto max-sm:flex-col lg:flex my-10 ">
+    <div className="gap-14 w-2/3 max-sm:w-full mx-auto max-sm:flex-col lg:flex my-10 justify-center items-center">
     <div className="w-60 h-96">
       <img
         src={mobileImg}
@@ -12,7 +12,7 @@ const Mobile:React.FC = () => {
         className="w-full h-full"
       />
     </div>
-    <div className="flex flex-col justify-start w-[65%] ">
+    <div className="flex flex-col justify-center w-[65%] max-sm:w-full px-3">
       <h1 className="font-bold text-slate-600 text-4xl uppercase  py-1">
         Get the your home, word place, and office surveillance on your phone
       </h1>

@@ -11,24 +11,9 @@ interface singinFields {
   placeholder: string;
   type: string;
 }
-const SingIn: React.FC<{ setSingIn: (show: boolean) => void }> = ({
-  setSingIn,
+const SingIn: React.FC<{ setSignIn: (show: boolean) => void }> = ({
+  setSignIn,
 }) => {
-  //   const onSubmit = async (values: FormValues) => {
-  //     try {
-  //       setLoading(true);
-  //       console.log("Form submitted with values:", values);
-  //       await new Promise((resolve) => setTimeout(resolve, 1000));
-  //       toast.success("Reset password link sent successfully!");
-  //       setShowResetPassword(true); // Show the ResetPassword component after successful submission
-  //       setShowForgetPassword(false); // Hide the ForgetPassword component after successful submission
-  //     } catch (error) {
-  //       console.error("Error:", error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-
   return (
     <div className="z-50 fixed inset-0 flex items-center justify-center bg-black bg-opacity-30">
       <Toaster
@@ -39,8 +24,8 @@ const SingIn: React.FC<{ setSingIn: (show: boolean) => void }> = ({
       <div className="w-full max-w-md mx-10 bg-white rounded-lg p-6 relative">
         
           <button
-            onClick={() => setSingIn(false)}
-            className="text-xl text-slate-700 absolute left-96">
+            onClick={() => setSignIn(false)}
+            className="text-xl text-slate-700 absolute left-96 max-sm:left-80">
             <X size={24} />
           </button>
 

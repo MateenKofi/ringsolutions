@@ -6,7 +6,7 @@ const Banner:React.FC = () => {
     <div className="w-full grid place-items-center bg-white pt-6">
           <div className="w-5/6 grid lg:grid-cols-2 place-items-center">
             <div className="w-full grid place-items-center">
-              <h1 className="text-center text-orange-600 text-6xl font-bold py-5 capitalize">
+              <h1 className="text-center text-orange-600 text-6xl max-sm:text-2xl max-sm:font-extrabold font-bold py-5 capitalize">
                 Ring solution providng the best CCTV services
               </h1>
               <p className="text-center text-xl tracking-wider text-[#676767]">

@@ -1,14 +1,14 @@
 import React,{useState} from 'react';
 import { Link } from 'react-router-dom';
 import UserSection from './UserSection';
-import SingIn from './Authentications/SingIn';
-import SignUp from './Authentications/SingUp';
-import logo from '../assets/images/logo.svg'
+import SingIn from '../../components/Authentications/SingIn';
+import logo from '../../assets/images/logo.svg'
+import SignUp from '../../components/Authentications/SingUp';
 
 const Navbar: React.FC = () => {
   const [bookings, setBookings] = useState<boolean>(false)
-  const [singIn, setSignIn] = useState<boolean>(false)
-  const [singUp, setSignUp] = useState<boolean>(false)
+  const [signIn, setSignIn] = useState<boolean>(false)
+  const [signUp, setSignUp] = useState<boolean>(false)
   const showSignIn = () => {
     setSignIn(true)
     setSignUp(false)
@@ -25,8 +25,8 @@ const Navbar: React.FC = () => {
   }
   return (
     <div className="w-full static z-50">
-      {singIn && <SingIn setSingIn={setSignIn} />}
-      {singUp && <SignUp setSignUp={setSignUp}/>}
+      {signIn && <SingIn setSignIn={setSignIn} />}
+      {signUp && <SignUp setSignUP={setSignUp}/>}
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">

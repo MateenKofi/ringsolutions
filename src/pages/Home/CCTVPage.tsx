@@ -1,8 +1,8 @@
 import React from 'react';
-import Badge from '../components/cctv/Badge';
-import Banner from '../components/cctv/Banner';
-import Mobile from '../components/cctv/Mobile';
-import DSVS from '../components/cctv/Dsvs';
+import Badge from '../../components/cctv/Badge';
+import Banner from '../../components/cctv/Banner';
+import Mobile from '../../components/cctv/Mobile';
+import DSVS from '../../components/cctv/Dsvs';
 
 
 
@@ -13,7 +13,7 @@ const CCTVPage: React.FC = () => {
       <div className="w-2/3 grid place-items-center ">
         {/* Header */}
         <header className="text-center uppercase font-bold">
-          <h1 className="text-[42px] py-5">
+          <h1 className="text-[42px] max-sm:text-[28px] py-5">
             <span className="text-orange-600">Ring Solution</span> range of{' '}
             <span className="text-orange-600">security</span> Cameras
           </h1>

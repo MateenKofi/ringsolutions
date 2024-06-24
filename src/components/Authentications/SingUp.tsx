@@ -11,23 +11,10 @@ interface signupDataFields {
   placeholder: string;
   type: string;
 }
-const SignUp : React.FC<{ setSignUp: (show: boolean) => void }> = ({
-    setSignUp,
+
+const SignUp : React.FC<{ setSignUP: (show: boolean) => void }> = ({
+  setSignUP,
 }) => {
-  //   const onSubmit = async (values: FormValues) => {
-  //     try {
-  //       setLoading(true);
-  //       console.log("Form submitted with values:", values);
-  //       await new Promise((resolve) => setTimeout(resolve, 1000));
-  //       toast.success("Reset password link sent successfully!");
-  //       setShowResetPassword(true); // Show the ResetPassword component after successful submission
-  //       setShowForgetPassword(false); // Hide the ForgetPassword component after successful submission
-  //     } catch (error) {
-  //       console.error("Error:", error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
 
   return (
     <div className="z-50 fixed inset-0 flex items-center justify-center bg-black bg-opacity-30">
@@ -39,8 +26,8 @@ const SignUp : React.FC<{ setSignUp: (show: boolean) => void }> = ({
       <div className="w-full max-w-md mx-10 bg-white rounded-lg p-6 relative">
         
           <button
-            onClick={() => setSignUp(false)}
-            className="text-xl text-slate-700 absolute left-96">
+            onClick={() => setSignUP(false)}
+            className="text-xl text-slate-700 absolute left-96 max-sm:left-80">
             <X size={24} />
           </button>
 

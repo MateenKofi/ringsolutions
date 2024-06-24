@@ -1,5 +1,5 @@
 import React from 'react'
-import UserForm from '../components/form/UserForm'
+import UserForm from '../../components/form/UserForm'
 
 const Bookings:React.FC = () => {
   return (

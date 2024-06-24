@@ -1,7 +1,7 @@
 import React from 'react'
 import {  AppWindow, LayoutPanelTop } from 'lucide-react';
-import floor from '../assets/svgs/floor.svg'
-import house from '../assets/svgs/house.svg'
+import floor from '../../assets/svgs/floor.svg'
+import house from '../../assets/svgs/house.svg'
 
 
 const ServicesCleaning:React.FC = () => {

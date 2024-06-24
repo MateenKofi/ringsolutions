@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
       {/* badge */}
-      <div className="w-full grid place-items-center bg-orange-600 text-white py-2">
+      <div className="w-full grid place-items-center bg-orange-600 text-white py-2 px-4">
         <h1 className="text-3xl font-mono font-bold uppercase ">Spring Ring Solutions, we spring beyound our reach</h1>
         </div>
     </div>

@@ -1,7 +1,7 @@
 
 import React from 'react';
-import ServicesCleaning from '../components/ServicesCleaning';
-import ServicesSecurity from '../components/ServicesSecurity';
+import ServicesCleaning from './ServicesCleaning';
+import ServicesSecurity from './ServicesSecurity';
 
 const ServicesPage: React.FC = () => {
   return (

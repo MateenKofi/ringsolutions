@@ -1,6 +1,6 @@
 import React from 'react'
-import image1 from '../assets/images/Rectangle 11.png'
-import image2 from '../assets/images/Rectangle 8.png'
+import image1 from '../../assets/images/Rectangle 11.png'
+import image2 from '../../assets/images/Rectangle 8.png'
 import { Contact,Store } from 'lucide-react'
 
 const AboutPage:React.FC = () => {
