@@ -17,7 +17,7 @@ const SignUp : React.FC<{ setSignUP: (show: boolean) => void }> = ({
 }) => {
 
   return (
-    <div className="z-50 fixed inset-0 flex items-center justify-center bg-black bg-opacity-30">
+    <div className="z-50 fixed inset-0 flex items-center justify-center bg-black bg-opacity-55">
       <Toaster
         position="top-center"
         reverseOrder={false}

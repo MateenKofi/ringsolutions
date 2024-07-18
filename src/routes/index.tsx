@@ -25,8 +25,8 @@ const rootRoutes = createBrowserRouter(
         <Route
         path="/bookings"
         lazy={async () => {
-          const { default: Bookings } = await import("./bookings/index");
-          return { Component: Bookings };
+          const { default: UnderMaintainance } = await import("./underMaintainance/index");
+          return { Component: UnderMaintainance };
         }}/>
       </Route>
      
