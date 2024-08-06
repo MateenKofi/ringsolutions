@@ -4,22 +4,33 @@ import logo from '../../../assets/images/logo.svg';
 import { Link } from 'react-router-dom';
 import { NavLinks } from '../../data/Navlinks';
 import DUserSection from '../usersection/index';
+import { motion } from 'framer-motion';
+
+const linkVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+};
 
 const SideBar: React.FC = () => {
   const [active, setActive] = useState<string | null>(null);
   const [expanded, setExpanded] = useState<boolean>(true);
 
-  const setActiveBgColor = (title: string) => {
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+
+  const handleActiveLink = (title: string) => {
     setActive(title === active ? null : title);
   };
 
   return (
-    <div
-      className={`relative py-2  lg:flex hidden flex-col items-center border border-r-2 shadow-lg h-full ${
+    <motion.div
+      className={`relative py-2 lg:flex hidden flex-col items-center border border-r-2 shadow-lg h-full ${
         expanded ? 'w-[20%]' : 'w-[5%]'
-      }`}>
+      }`}
+      animate={{ width: expanded ? '20%' : '5%' }}
+      transition={{ duration: 0.3 }}
+    >
       <div className="h-full w-full grid place-items-center">
-        <div className='flex gap-2 items-center px-4'>
+        <div className="flex gap-2 items-center px-4">
           <figure>
             <img
               src={logo}
@@ -27,60 +38,76 @@ const SideBar: React.FC = () => {
               className="w-10 h-10"
             />
           </figure>
-          <div  className={`active:bg-orange-600 focus:bg-orange-600 ${
-                  expanded ? 'w-full px-2' : 'hidden'
-                }`}>
+          <motion.div
+            className={`transition-all duration-300 ${
+              expanded ? 'w-full px-2' : 'hidden'
+            }`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: expanded ? 1 : 0 }}
+          >
             <Link
-              to=" "
-              className="text-base font-bold">
+              to="#"
+              className="text-base font-bold"
+            >
               <span className="text-orange-600">R</span>ing
               <span className="text-orange-600">S</span>olutions
             </Link>
-          </div>
+          </motion.div>
         </div>
-        <div className="flex gap-4 justify-center items-center mx-4 ">
-          <button
-            className="z border-2 rounded-xl py-1 text-[#ffff] bg-orange-600 absolute -right-4 top-12 transition-all duration-200 "
-            onClick={() => setExpanded((curr) => !curr)}
-            aria-label={expanded ? 'Collapse sidebar' : 'Expand sidebar'}>
-            {expanded ? <ChevronLeft size={25} /> : <ChevronRight size={25} />}
-          </button>
-        </div>
+        <button
+          className="absolute -right-4 top-12 border-2 rounded-xl py-1 text-white bg-orange-600 transition-all duration-200 z-10"
+          onClick={() => setExpanded((curr) => !curr)}
+          aria-label={expanded ? 'Collapse sidebar' : 'Expand sidebar'}
+        >
+          {expanded ? <ChevronLeft size={25} /> : <ChevronRight size={25} />}
+        </button>
 
-        <div className="mb-5 flex flex-col text-slate-500 px-2  text-base">
+        <motion.div
+          className="mb-5 flex flex-col text-slate-500 px-2 text-base"
+          initial="hidden"
+          animate="visible"
+          variants={linkVariants}
+        >
           {NavLinks.map((link) => (
-            <div
+            <motion.div
               key={link.title}
-              className={`w-full py-2 px-2 mt-3  flex  hover:bg-orange-600 hover:text-white rounded-lg cursor-pointer transition-all duration-300 group ${
-                active === link.title ? 'bg-orange-600 text-white' : ''
+              className={`w-full py-2 px-2 mt-3 flex items-center rounded-lg cursor-pointer transition-all duration-300 group ${
+                active === link.title ? 'bg-orange-600 text-white' : 'hover:bg-orange-600 hover:text-white'
               }`}
-              onClick={() => setActiveBgColor(link.title)}>
-              <div>
-                <Link to={link.path}>
-                {React.createElement(link.icon)}
+              onClick={() => handleActiveLink(link.title)}
+              onMouseEnter={() => setHoveredLink(link.title)}
+              onMouseLeave={() => setHoveredLink(null)}
+              variants={linkVariants}
+            >
+              <div className="flex items-center">
+                {React.createElement(link.icon, { className: 'mr-2' })}
                 {!expanded && (
-                  <div className="w-full -mt-6 absolute left-full -translate-x-3 rounded-md px-2 py-2 ml-6 bg-indigo-100 text-indigo-800 text-sm opacity-0 transition-colors group-hover:opacity-100 group-hover:translate-x-0 invisible group-hover:visible">
+                  <motion.div
+                    className={`absolute left-full ml-2 -translate-x-3 rounded-md px-2 py-1 bg-indigo-100 text-indigo-800 text-sm ${
+                      hoveredLink === link.title ? 'opacity-100' : 'opacity-0'
+                    } transition-opacity duration-500 ease-in-out`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: hoveredLink === link.title ? 1 : 0 }}
+                  >
                     {link.title}
-                  </div>
+                  </motion.div>
                 )}
-                </Link>
               </div>
               <Link
                 to={link.path}
-                className={`active:bg-orange-600 focus:bg-orange-600 transition-all duration-300 ${
-                  expanded ? 'w-full px-2' : 'hidden'
-                }`}>
+                className={`ml-2 transition-all duration-300 ${expanded ? 'block' : 'hidden'}`}
+              >
                 {link.title}
               </Link>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <div>
-          <DUserSection expanded={expanded}/>
+          <DUserSection expanded={expanded} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
