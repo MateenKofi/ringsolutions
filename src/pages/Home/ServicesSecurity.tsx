@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import image1 from '../../assets/images/WhatsApp Image 2024-04-26 at 10.39.21 PM.png';
 import image2 from '../../assets/images/fajcd_WhatsApp Image 2024-04-26 at 10.39.21 PM.png';
 import { security } from '../../assets/data/data';
 import { CalendarClock } from 'lucide-react';
 import { MdMiscellaneousServices } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const ServicesSecurity: React.FC = () => {
+  useEffect(() => {
+    Aos.init({
+      once: false,
+    });
+  }, []);
   return (
     <div className="w-full h-auto  mt-10 ">
       <div className="w-full  bg-[#fff] grid place-items-center">
@@ -35,13 +42,13 @@ const ServicesSecurity: React.FC = () => {
             />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-orange-600 py-2 uppercase">
+            <h1 className="text-xl font-bold text-orange-600 py-2 uppercase" data-aos="fade-left" data-aos-duration="900">
               Security & Safety is out priority
             </h1>
-            <h1 className="text-4xl font-bold text-slate-700 py-2 uppercase">
+            <h1 className="text-4xl font-bold text-slate-700 py-2 uppercase" data-aos="fade-left" data-aos-duration="1000">
               Residential Security system
             </h1>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4" data-aos="fade-left" data-aos-duration="1500">
               <p className="text-sm tracking-wide text-slate-500">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                 euismod bibendum laoreet. Proin gravida dolor sit amet lacus

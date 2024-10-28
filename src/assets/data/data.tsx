@@ -9,13 +9,6 @@ import worker2 from '../images/Rectangle 29.png';
 import worker3 from '../images/Rectangle 32.png';
 
 
-
-// export type Service = {
-//     id: number;
-//     title: string;
-//     image:  JSX.Element;
-// };
-
 export const security = [
     {
         id: 1,

@@ -1,5 +1,7 @@
 import React from 'react'
 import { CCTV_DATA } from '../../assets/data/data';
+import Aos from 'aos'
+import 'aos/dist/aos.css';
 
 type CardType = {
     id: number;
@@ -9,8 +11,13 @@ type CardType = {
   };
 
 const Badge:React.FC = () => {
+  React.useEffect(() => {
+    Aos.init({
+      once: false,
+    });
+  }, []);
   return (
-    <section className="grid xl:grid-cols-3 grid-cols-1 md:grid-cols-2 sm:grid-cols-1 w-full gap-10 p-5 mx-auto my-12">
+    <section className="grid xl:grid-cols-3 grid-cols-1 md:grid-cols-2 sm:grid-cols-1 w-full gap-10 p-5 mx-auto my-12"  data-aos="fade-up" data-aos-duration="1000">
     {CCTV_DATA.map((card: CardType) => (
       <div
         key={card.id}

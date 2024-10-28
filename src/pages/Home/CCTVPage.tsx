@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Badge from '../../components/cctv/Badge';
 import Banner from '../../components/cctv/Banner';
 import Mobile from '../../components/cctv/Mobile';
 import DSVS from '../../components/cctv/Dsvs';
+import Aos from 'aos'
+import 'aos/dist/aos.css';
 
 
 
 const CCTVPage: React.FC = () => {
-  
+  useEffect(() => {
+    Aos.init({
+      once: false,
+    });
+  }, []);
   return (
     <div className="w-full grid place-items-center  h-auto">
       <div className="w-2/3 grid place-items-center ">
         {/* Header */}
-        <header className="text-center uppercase font-bold">
+        <header className="text-center uppercase font-bold" data-aos="fade-up">
           <h1 className="text-[42px] max-sm:text-[28px] py-5">
             <span className="text-orange-600">Ring Solution</span> range of{' '}
             <span className="text-orange-600">security</span> Cameras
