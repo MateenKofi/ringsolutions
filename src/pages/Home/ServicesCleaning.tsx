@@ -2,9 +2,15 @@ import React from 'react'
 import {  AppWindow, LayoutPanelTop } from 'lucide-react';
 import floor from '../../assets/svgs/floor.svg'
 import house from '../../assets/svgs/house.svg'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 const ServicesCleaning:React.FC = () => {
+  Aos.init({
+    once:false,
+  });
+
   return (
     <div className="w-full px-20 max-sm:mt-10 z-0">
           <div className="w-full  bg-[#fff] grid place-items-center">
@@ -13,8 +19,8 @@ const ServicesCleaning:React.FC = () => {
             </h1>
 
             <div className="w-full max-sm:mt-10  grid lg:grid-cols-4 gap-4 place-items-center">
-              <div className="border-2 rounded-lg flex flex-col items-center relative">
-                <div className=" border-2 rounded-full p-6 absolute -top-12 bg-white text-orange-600">
+              <div className="border-2 rounded-lg flex flex-col items-center relative" data-aos="fade-right" data-aos-duration="1500">
+                <div className=" border-2 rounded-full p-6 absolute -top-12 bg-white text-orange-600" >
                 <img src={house}
                   alt="house"
                   className="w-16 h-16 object-cover text-orange-600"
@@ -31,7 +37,7 @@ const ServicesCleaning:React.FC = () => {
                   </p>
                 </div>
               </div>
-              <div className="border-2 rounded-lg flex flex-col items-center relative">
+              <div className="border-2 rounded-lg flex flex-col items-center relative" data-aos="fade-right" data-aos-duration="1000">
                 <div className=" border-2 rounded-full p-6 absolute -top-12 bg-white text-orange-600">
                   <LayoutPanelTop size={40} />
                 </div>
@@ -46,7 +52,7 @@ const ServicesCleaning:React.FC = () => {
                   </p>
                 </div>
               </div>
-              <div className="border-2 rounded-lg flex flex-col items-center relative">
+              <div className="border-2 rounded-lg flex flex-col items-center relative" data-aos="fade-left" data-aos-duration="1500">
                 <div className=" border-2 rounded-full p-4 absolute -top-12 bg-white text-orange-600">
                   {/* <GiVacuumCleaner className="text-6xl font-extrabold" />
                    */}
@@ -66,7 +72,7 @@ const ServicesCleaning:React.FC = () => {
                   </p>
                 </div>
               </div>
-              <div className="border-2 rounded-lg flex flex-col items-center relative">
+              <div className="border-2 rounded-lg flex flex-col items-center relative" data-aos="fade-left" data-aos-duration="1000">
                 <div className=" border-2 rounded-full p-6 absolute -top-12 bg-white text-orange-600">
                   <AppWindow size={40} />
                 </div>
