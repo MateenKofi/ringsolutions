@@ -33,12 +33,14 @@ const ServicesSecurity: React.FC = () => {
               src={image1}
               alt="First Image"
               className="lg:w-[70%] max-sm:w-full h-[60dvh] rounded-md cursor-pointer "
+              data-aos="zoom-in"
             />
             <img
               src={image2}
               alt="Second Image"
               className="w-full rounded-md lg:w-[50%]  lg:absolute  lg:top-1/2  lg:left-72 transform  h-[40dvh] lg:border-8 
-              cursor-pointer lg:border-white lg:rounded-md  lg:shadow-lg  lg:transition-transform lg:duration-500 lg:hover:scale-110 lg:hover:rotate-6 lg:hover:translate-x-1/4 lg:hover:translate-y-1/4"
+              cursor-pointer lg:border-white lg:rounded-md  lg:shadow-lg "
+              data-aos="fade-right"
             />
           </div>
           <div>
@@ -65,7 +67,7 @@ const ServicesSecurity: React.FC = () => {
                 return (
                   <div
                     key={items.id}
-                    className="border-2 bg-orange-600 rounded-lg flex flex-col items-center relative">
+                    className="border-2 bg-orange-600 rounded-lg flex flex-col items-center relative" data-aos="zoom-in-up" data-aos-duration="1000">
                     <div className=" border-2 rounded-full p-4 absolute -top-6 text-white bg-orange-600">
                       {items.image}
                     </div>
@@ -78,7 +80,7 @@ const ServicesSecurity: React.FC = () => {
                 );
               })}
             </div>
-            <div className="w-full py-4">
+            <div className="w-full py-4" data-aos='fade-left' data-aos-duration="1000">
               <Link to={'/bookings'}>
                 <button className="max-sm:w-full bg-orange-600 text-white px-6 py-2 rounded-2xl flex items-center justify-center gap-2">
                   <CalendarClock size={24} />

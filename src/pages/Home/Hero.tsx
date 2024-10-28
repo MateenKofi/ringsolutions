@@ -51,6 +51,7 @@ const Hero: React.FC = () => {
             src={image}
             alt="banner"
             className="h-[90dvh]"
+            loading='lazy'
           />
         </div>
       </div>
