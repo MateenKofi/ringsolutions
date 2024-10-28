@@ -1,15 +1,14 @@
-import React from 'react'
-import Hero from './Hero'
-import AboutPage from './AboutPage'
-import ServicesPage from './ServicesPage'
-import CCTVPage from './CCTVPage'
-import Workers from './Workers'
-
-const HomePage:React.FC = () => {
+import React from 'react';
+import Hero from './Hero';
+import AboutPage from './AboutPage';
+import ServicesPage from './ServicesPage';
+import CCTVPage from './CCTVPage';
+import Workers from './Workers';
+const HomePage: React.FC = () => {
   return (
-    <div className=''>
+    <div className="">
       <Hero />
-      <div className='py-5'>
+      <div className="py-5">
         <AboutPage />
       </div>
       <div>
@@ -22,7 +21,7 @@ const HomePage:React.FC = () => {
         <Workers />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
