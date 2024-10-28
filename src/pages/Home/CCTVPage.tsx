@@ -3,10 +3,8 @@ import Badge from '../../components/cctv/Badge';
 import Banner from '../../components/cctv/Banner';
 import Mobile from '../../components/cctv/Mobile';
 import DSVS from '../../components/cctv/Dsvs';
-import Aos from 'aos'
+import Aos from 'aos';
 import 'aos/dist/aos.css';
-
-
 
 const CCTVPage: React.FC = () => {
   useEffect(() => {
@@ -18,14 +16,16 @@ const CCTVPage: React.FC = () => {
     <div className="w-full grid place-items-center  h-auto">
       <div className="w-2/3 grid place-items-center ">
         {/* Header */}
-        <header className="text-center uppercase font-bold" data-aos="fade-up">
+        <header
+          className="text-center uppercase font-bold"
+          data-aos="fade-up">
           <h1 className="text-[42px] max-sm:text-[28px] py-5">
             <span className="text-orange-600">Ring Solution</span> range of{' '}
             <span className="text-orange-600">security</span> Cameras
           </h1>
         </header>
         {/* Cards */}
-     <Badge />
+        <Badge />
       </div>
       {/* Banner */}
       <section className="w-full">
@@ -37,10 +37,10 @@ const CCTVPage: React.FC = () => {
         {/* Get the App */}
         <section className="w-full flex flex-col items-center justify-between pt-10">
           {/* Eagle Eye App */}
-        <Mobile />
+          <Mobile />
 
           {/* DSVS Software */}
-        <DSVS />
+          <DSVS />
         </section>
       </section>
     </div>
