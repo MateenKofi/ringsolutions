@@ -46,14 +46,14 @@ const Hero: React.FC = () => {
           </div>
         </div>
         <div>
-          <img
-            src={image}
-            alt="banner"
-            className="h-[90dvh]"
-            loading='lazy'
-            data-aos="fade-left"
-            data-aos-duration="2000"
-          />
+            <img
+              src={image}
+              alt="banner"
+              className="lg:h-[90dvh]"
+              loading='lazy'
+              data-aos="fade-left"
+              data-aos-duration="2000"
+            />
         </div>
       </div>
       {/* badge */}

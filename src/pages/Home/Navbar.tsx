@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
     setBookings(false)
   }
   return (
-    <div className="w-full static z-50">
+    <div className="w-full  z-50 sticky top-0 bg-white shadow-md">
       {signIn && <SingIn setSignIn={setSignIn} />}
       {signUp && <SignUp setSignUP={setSignUp}/>}
       <div className="navbar bg-base-100">
