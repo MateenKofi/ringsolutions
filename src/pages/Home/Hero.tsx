@@ -12,10 +12,8 @@ const Hero: React.FC = () => {
     });
   },[]);
   return (
-    <div data-aos="fade-down" data-aos-duration="2000">
-    <div className="w-full  grid  place-items-center "
-    
-   >
+    <div data-aos="fade-down" data-aos-duration="2000" >
+    <div className="w-full  grid  place-items-center ">
       <div className="w-5/6 grid lg:grid-cols-2 place-items-center">
         <div className='h-full grid justify-between items-center'>
           <div className='flex flex-col gap-4'>
