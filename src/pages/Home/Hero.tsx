@@ -8,10 +8,11 @@ const Hero: React.FC = () => {
   useEffect(() => {
     Aos.init({
       once:false,
+      mirror:true,
     });
   },[]);
   return (
-    <div data-aos="fade-down" data-aos-duration="1000">
+    <div data-aos="fade-down" data-aos-duration="2000">
     <div className="w-full  grid  place-items-center "
     
    >
@@ -52,6 +53,8 @@ const Hero: React.FC = () => {
             alt="banner"
             className="h-[90dvh]"
             loading='lazy'
+            data-aos="fade-left"
+            data-aos-duration="2000"
           />
         </div>
       </div>
