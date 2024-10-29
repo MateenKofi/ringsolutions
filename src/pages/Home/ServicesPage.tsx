@@ -9,6 +9,7 @@ const ServicesPage: React.FC = () => {
   useEffect(() => {
     Aos.init({
       once: false,
+      disable: 'phone',
     });
   }, []);
   return (

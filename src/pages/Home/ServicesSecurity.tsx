@@ -24,7 +24,7 @@ const ServicesSecurity: React.FC = () => {
   const isLargeScreen = useIsLargeScreen();
 
   useEffect(() => {
-    Aos.init({ once: false });
+    Aos.init({ once: false, disable: 'phone', });
   }, []);
 
   return (

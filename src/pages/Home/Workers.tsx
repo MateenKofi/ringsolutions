@@ -8,6 +8,7 @@ const Workers:React.FC = () => {
   useEffect(() => {
     Aos.init({
       once: false,
+      disable: 'phone',
     });
   },[])
   return (

@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 const Footer: React.FC = () => {
   useEffect(() => {
     Aos.init({
+      disable: 'phone',
       once: false,
     });
   }, []);

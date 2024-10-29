@@ -9,6 +9,7 @@ const Hero: React.FC = () => {
     Aos.init({
       once:false,
       mirror:true,
+      disable: 'phone',
     });
   },[]);
   return (

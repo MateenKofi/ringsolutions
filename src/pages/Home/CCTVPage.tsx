@@ -10,6 +10,7 @@ import 'aos/dist/aos.css';
 const CCTVPage: React.FC = () => {
   useEffect(() => {
     Aos.init({
+      disable: 'phone',
       once: false,
     });
   }, []);
