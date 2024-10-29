@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Phone, Mail, Map } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Footer: React.FC = () => {
+  useEffect(() => {
+    Aos.init({
+      once: false,
+    });
+  }, []);
   return (
     <footer className="grid lg:grid-cols-3 gap-6 p-10 bg-blue-950 text-white">
-      <nav className="flex flex-col gap-2">
+      <nav className="flex flex-col gap-2" data-aos="fade-up" data-aos-duration="1000">
         <figure>
           <img
             src={logo}
