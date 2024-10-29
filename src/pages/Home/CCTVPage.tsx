@@ -6,6 +6,7 @@ import DSVS from '../../components/cctv/Dsvs';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
+
 const CCTVPage: React.FC = () => {
   useEffect(() => {
     Aos.init({
