@@ -150,7 +150,7 @@ const Navbar: React.FC = () => {
               </li>
           </ul>
         </div>
-        <div className="navbar-end mr-4 flex gap-4">
+        <div className="navbar-end mr-4 flex gap-4 hidden">
          <UserSection showSignIn={showSignIn} showSignUp={showSignUp}/>
          
         </div>
